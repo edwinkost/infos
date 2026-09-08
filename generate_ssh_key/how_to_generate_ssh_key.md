@@ -1,4 +1,4 @@
-# How to generate a new ssh key using mobaXTerm (windows)
+# How to generate a new ssh key using mobxterm (windows)
 
 **Note:** Linux and macOS users should proceed directly to Step 3.
 
