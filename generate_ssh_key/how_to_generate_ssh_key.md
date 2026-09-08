@@ -1,27 +1,32 @@
-# How to Generate an SSH Key Using MobaXTerm (Windows)
+# How to generate a new ssh key using mobaXTerm (windows)
 
 **Note:** Linux and macOS users should proceed directly to Step 3.
 
-## Step 1: Install MobaXTerm
+## Step 1: Install mobaxterm
 Download and install the free edition from https://mobaxterm.mobatek.net/
 
-## Step 2: Open a Terminal
-Click **"Start local terminal"** in MobaXTerm's main window.
+## Step 2: Open a terminal
+Start a terminal in mobaxterm
 
 ## Step 3: Generate Your SSH Key
 Run this command:
-```bash
-ssh-keygen -t rsa -b 4096 -f ~/.ssh/id\_rsa
+```
+ssh-keygen -t ed25519 -C "mobaxterm@my_laptop"
+```
 
+When you're prompted to "Enter a file in which to save the key", you can press Enter to accept the default file location. Please note that if you created SSH keys previously, ssh-keygen may ask you to rewrite another key (in which case we recommend creating a custom-named SSH key). 
 
-How to generate a ssh key using mobaxterm (for windows users; for linux/mac's, go to the step 3 directly):
+At the next prompts (regarding passphrase), you can also just press Enter for using no passphrase.
 
-1. To get the access to velocity from your windows, I recommend to install mobaxterm on your laptop.
-Please install it from https://mobaxterm.mobatek.net/ (please just use the free edition version)
+## Step 4: Display/copy your public ssh key
+```
+cat ~/.ssh/id_rsa.pub
+```
 
-2. Then, start your mobaxterm and open a terminal on it. 
+Example output:
+```
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKf8vN2pL9mK3qR5sT7uW9xY2aB4cD6eF8gH1iJ3kL5m mobaxterm@my_laptop
+```
 
-3. Please generate a ssh public key on the terminal, using the following command (provide example)
-
-4. Then send this public key to the admin.
-
+## Step 5: Send the copied public key to your admin via email or designated form.
+Important: Never share your private key (id_rsa). Only share the public key (id_rsa.pub).
