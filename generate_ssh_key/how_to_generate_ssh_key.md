@@ -9,14 +9,14 @@ Download and install the free edition from https://mobaxterm.mobatek.net/
 Start a terminal in mobaxterm
 
 ## Step 3: Generate Your SSH Key
-Run this command:
+Run this command on your terminal.
 ```
 ssh-keygen -t ed25519 -C "mobaxterm@my_laptop"
 ```
 
 When you're prompted to "Enter a file in which to save the key", you can press Enter to accept the default file location. Please note that if you created SSH keys previously, ssh-keygen may ask you to rewrite another key (in which case we recommend creating a custom-named SSH key). 
 
-At the next prompts (regarding passphrase), you can also just press Enter for using no passphrase.
+At the next prompts (regarding passphrase), you can also just press Enter (for simply using no passphrase).
 
 ## Step 4: Display/copy your public ssh key
 ```
